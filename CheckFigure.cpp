@@ -1,7 +1,7 @@
 #include "CheckFigure.h"
 
 // Check for the figure in depth, search for every node part of the figure
-void CheckFigures::goDeep(const vector< vector <int>> matrix, vector< vector <bool>> &checked, int row, int col, short int ComesFrom)
+void CheckFigures::goDeep(const vector< vector <int>> &matrix, vector< vector <bool>> &checked, int row, int col, short int ComesFrom)
 {
 	//Check if we are in the matrix
 	if (row < matrix.size() && col < matrix[0].size() && row > -1 && col > -1)
@@ -51,7 +51,7 @@ void CheckFigures::goDeep(const vector< vector <int>> matrix, vector< vector <bo
 	}
 }
 
-void CheckFigures::checkMatrix(const vector< vector <int>> matrix, vector< vector <bool>> &checked, int row, int col)
+void CheckFigures::checkMatrix(const vector< vector <int>> &matrix, vector< vector <bool>> &checked, int row, int col)
 {
 	//Check if we are in the matrix
 	if (row < ROW_MAX && col < COL_MAX && row > -1 && col > -1)
